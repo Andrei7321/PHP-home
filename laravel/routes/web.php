@@ -15,4 +15,8 @@
 //     return view('welcome');
 // });
 
-Route::get('/form', 'FormController@index');
+Route::resource('/form', 'FormController');
+Route::resource('/favorites', 'FormController');
+
+// Route::get('/form', 'FormController@index');
+// Route::get('/form', 'FormController@com');
