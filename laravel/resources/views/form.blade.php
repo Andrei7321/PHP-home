@@ -95,7 +95,11 @@
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
-                <small class="text-muted">9 mins</small>
+                @csrf
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Add to Favorites</label>
+                    </div>
               </div>
             </div>
             
@@ -104,13 +108,18 @@
         @endforeach 
         @else
         <div class="container">
-            <p class = "form-text text-muted" align="center">You haven't made any requests</p>
+            <p class = "form-text text-muted" align="center">You did not make requests</p>
         </div>
         @endif
     
       </div>
     </div>
   </div>
+      <form action=" " method="POST">
+          @csrf
+          <button type="button" class="btn btn-primary btn-lg btn-block" >Add</button>
+      </form>
+  
 </main>
 
 <footer class="text-muted">
